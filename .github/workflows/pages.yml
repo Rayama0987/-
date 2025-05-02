@@ -1,10 +1,10 @@
-# .github/workflows/pages.yml に保存
+# .github/workflows/pages.yml
 name: Deploy to GitHub Pages
 
 on:
   push:
     branches:
-      - main  # pushされたときに実行
+      - main
 
 jobs:
   deploy:
@@ -20,7 +20,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
         with:
-          path: .  # index.html がルートにある場合
+          path: .  # index.html がリポジトリのルートにある想定
 
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v2
